@@ -19,9 +19,10 @@ the theme contributes no render-blocking stylesheet request at all. Its default 
 reader's own system font, so no web font is downloaded unless you choose a style variation that
 uses one.
 
-Seven templates cover a blog or a small site, with a header and footer template part, seven
-patterns and three style variations: Dark, Editorial and Ink. Editorial uses a bundled Instrument
-Serif for headings; the font is fetched only when that variation is active.
+Eight templates cover a blog or a small site, including a wide page template, with a header and
+footer template part, five patterns to insert and three style variations: Dark, Editorial and Ink.
+Editorial uses a bundled Instrument Serif for headings; the font is fetched only when that
+variation is active.
 
 Structured data, meta tags, sitemaps and caching are deliberately left to plugins that specialise
 in them. The theme stays out of their way and does the part a theme can legitimately own: clean
