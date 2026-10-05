@@ -15,22 +15,40 @@ PHP exists only for asset registration and the speculation-rules configuration. 
 ## Measured
 
 Same install, same content (WordPress Theme Unit Test data), same URLs, same method. Bytes are
-uncompressed; total is the document plus every CSS, JS and font subresource. Reproduce with
+uncompressed; total is the document plus every CSS, JS and font subresource, **including the
+scripts WordPress loads from an inline block rather than a `src` attribute**. Reproduce with
 `php tools/benchmark.php`.
 
 | Home | total bytes | CSS requests | JS requests | DOM elements |
 |---|---|---|---|---|
-| **Zactonz Lite** | **53,182** | **0** | **0** | **134** |
-| GeneratePress 3.6.1 | 100,981 | 1 | 1 | 391 |
-| Neve 4.2.15 | 108,800 | 1 | 2 | 312 |
-| Twenty Twenty-Five 1.5 | 215,034 | 2 | 2 | 1,082 |
+| **Zactonz Lite** | **78,911** | **0** | **0** (+2) | **134** |
+| GeneratePress 3.6.1 | 126,757 | 1 | 1 (+2) | 392 |
+| Neve 4.2.15 | 134,576 | 1 | 2 (+2) | 313 |
+| Twenty Twenty-Five 1.5 | 280,916 | 2 | 2 (+3) | 1,083 |
 
-| Single post, 20 comments | total bytes | CSS requests | JS requests | DOM elements |
+| Single post, 19 comments | total bytes | CSS requests | JS requests | DOM elements |
 |---|---|---|---|---|
-| **Zactonz Lite** | **76,919** | **0** | 1 | **397** |
-| GeneratePress 3.6.1 | 108,141 | 2 | 2 | 543 |
-| Twenty Twenty-Five 1.5 | 120,826 | 1 | 2 | 520 |
-| Neve 4.2.15 | 124,183 | 1 | 3 | 544 |
+| **Zactonz Lite** | **102,648** | **0** | 1 (+2) | **397** |
+| GeneratePress 3.6.1 | 133,917 | 2 | 2 (+2) | 544 |
+| Neve 4.2.15 | 149,959 | 1 | 3 (+2) | 545 |
+| Twenty Twenty-Five 1.5 | 186,708 | 1 | 2 (+3) | 521 |
+
+| Post with 5 images | total bytes | CSS requests | JS requests | DOM elements |
+|---|---|---|---|---|
+| **Zactonz Lite** | **100,666** | **0** | 1 (+2) | **210** |
+| GeneratePress 3.6.1 | 135,504 | 2 | 2 (+2) | 355 |
+| Neve 4.2.15 | 151,599 | 1 | 3 (+2) | 353 |
+| Twenty Twenty-Five 1.5 | 182,717 | 1 | 2 (+3) | 324 |
+
+The number in brackets is scripts loaded at runtime by an inline block. Every theme carries the
+same two, core's emoji detection and its loader, about 25.7 KB: a theme in the directory is not
+allowed to remove them. Image bytes are excluded from these totals, because the images are content
+and identical for every theme; `tools/benchmark.php` prints them separately.
+
+A theme's share of a page shrinks as a site adds plugins. With one fixture plugin active that
+enqueues jQuery and one script of its own, `ZL_WITH_PLUGIN=1 php tools/benchmark.php`, the home
+page goes to 181,869 bytes here and 229,668 for GeneratePress: still lighter, by 21% rather
+than 38%.
 
 Measured on WordPress 7.1.2, PHP 8.5.5, MariaDB 12.3.3.
 
@@ -49,7 +67,8 @@ Two decisions account for most of the difference:
    that handle to `assets/css/navigation.css` (1,628 bytes), which covers a horizontal menu and
    submenus. Filter `zactonz_lite_slim_navigation_style` to `false` to keep core's.
 2. **The header menu does not use the overlay.** `overlayMenu` is `never`, so there is no modal
-   markup, no Interactivity API attributes and no JavaScript on the front page. The menu wraps on
+   markup, no Interactivity API attributes and no JavaScript of our own on the front page. The one
+   script that remains is core's emoji detection, which a directory theme may not remove. The menu wraps on
    narrow screens. A long menu will wrap to several rows; sites that need an overlay should set it
    in the editor and restore core's navigation CSS with the filter above.
 

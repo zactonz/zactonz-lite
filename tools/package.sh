@@ -27,6 +27,7 @@ mkdir -p "$dist/$slug"
 
 rsync -a \
 	--exclude '.git' \
+	--exclude '.gitignore' \
 	--exclude '.github' \
 	--exclude 'dist' \
 	--exclude 'tools' \
