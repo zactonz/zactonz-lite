@@ -3,6 +3,9 @@
 A WordPress block theme built around one measurable goal: adding as little as possible to the page.
 This file carries the explanation, because the shipped code carries no comments.
 
+**Developer documentation:** [docs/](docs/README.md) — extension points, navigation, templates and
+patterns, sidebars, sitemaps and SEO, styles and variations, performance.
+
 ## What it is
 
 A full block theme (FSE). `theme.json` is the single source of style truth. The theme ships **no
@@ -87,6 +90,9 @@ rather than trimmed for a few per cent.
 | `zactonz_lite_preload_fonts` | `true` | Preload bundled fonts that the active styles use |
 | `zactonz_lite_speculation` | config array | Final speculation-rules configuration |
 | `zactonz_lite_speculation_exclude_paths` | cart, checkout, account paths | Paths excluded from speculative loading |
+
+Each one, with signatures, worked examples and the cases where it is not called, is in
+[docs/extending.md](docs/extending.md).
 
 ## Speculative loading
 

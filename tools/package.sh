@@ -29,6 +29,7 @@ rsync -a --prune-empty-dirs \
 	--exclude '.git' \
 	--exclude '.gitignore' \
 	--exclude 'README.md' \
+	--exclude 'docs' \
 	--exclude '.github' \
 	--exclude 'dist' \
 	--exclude 'tools' \
