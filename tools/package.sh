@@ -25,7 +25,7 @@ dist="$root/dist"
 rm -rf "$dist"
 mkdir -p "$dist/$slug"
 
-rsync -a \
+rsync -a --prune-empty-dirs \
 	--exclude '.git' \
 	--exclude '.gitignore' \
 	--exclude 'README.md' \
