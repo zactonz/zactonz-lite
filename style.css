@@ -1,0 +1,17 @@
+/*
+Theme Name: Zactonz Lite
+Theme URI: https://zactonz.com/products/zactonz-lite/
+Author: Zactonz Technologies
+Author URI: https://zactonz.com/
+Description: A featherweight block theme for publishers who care about page weight. It ships no stylesheet request of its own, because WordPress inlines its styles, and its default style uses the reader's system font so no web font is downloaded at all. Seven templates, three style variations and a set of patterns cover a blog or a small site out of the box. Structured data, meta tags and caching are deliberately left to the plugins that specialise in them.
+Requires at least: 6.8
+Tested up to: 7.1
+Requires PHP: 7.4
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: zactonz-lite
+Tags: blog, one-column, two-columns, wide-blocks, block-patterns, block-styles, custom-colors, custom-logo, editor-style, featured-images, full-site-editing, style-variations, sticky-post, template-editing
+
+Zactonz Lite is distributed under the terms of the GNU GPL v2 or later.
+*/
