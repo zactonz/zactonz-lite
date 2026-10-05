@@ -48,3 +48,12 @@ function zactonz_lite_register_block_styles() {
 		)
 	);
 }
+
+add_filter( 'comment_form_defaults', 'zactonz_lite_comment_form_heading' );
+
+function zactonz_lite_comment_form_heading( $defaults ) {
+	$defaults['title_reply_before'] = '<h2 id="reply-title" class="comment-reply-title">';
+	$defaults['title_reply_after']  = '</h2>';
+
+	return $defaults;
+}
