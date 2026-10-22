@@ -40,25 +40,6 @@ At narrow widths the items wrap onto a second line instead of collapsing behind 
 The trade-off is real. A long menu wraps to several lines on a phone. If you need an overlay, change
 it and restore core's stylesheet — the next section explains why both steps are needed.
 
-## The navigation stylesheet substitution
-
-Core's `wp-block-navigation` stylesheet is **20,776 bytes**, and most of it styles things this header
-never renders: the responsive overlay, the open and closed states, submenu positioning and the
-several layout variants. The theme replaces it with `assets/css/navigation.css`, **1,628 bytes**,
-covering only what it actually uses — a saving of 19,148 bytes on every page.
-
-It is a handle substitution, not a dequeue:
-
-```php
-wp_deregister_style( 'wp-block-navigation' );
-wp_register_style( 'wp-block-navigation', ZACTONZ_LITE_URI . '/assets/css/navigation.css', array(), ZACTONZ_LITE_VERSION );
-```
-
-Keeping the handle name matters. Anything that depends on `wp-block-navigation` still resolves, and
-core's on-demand block-asset loading still decides when to print it.
-
-The proof that it works is not the file size — it is that none of core's nav-only selectors
-(`responsive-container-open`, `has-modal-open`, `is-menu-open`) appear in the rendered HTML.
 
 ### If you change the header
 
@@ -97,3 +78,11 @@ ring is 7.79:1 against a 3:1 requirement.
 When testing focus, press a real Tab key. A scripted `el.focus()` followed by `getComputedStyle`
 reports `outlineStyle: none`, because `:focus-visible` does not reliably apply to programmatic
 focus. That reads as a missing focus indicator and is not one.
+
+## The core stylesheet stays
+
+Earlier releases deregistered `wp-block-navigation` and substituted a smaller rewrite. That is gone
+as of 1.0.1. The replacement never covered the responsive overlay, so a navigation block a user
+inserted with the mobile menu enabled rendered without its container or its open and close buttons.
+Core's stylesheet is left alone; anything the theme wants on top goes in `assets/css/main.css` with
+a more specific selector.

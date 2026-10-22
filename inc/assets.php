@@ -1,4 +1,9 @@
 <?php
+/**
+ * Front-end assets: the theme's stylesheet and the fonts worth preloading.
+ *
+ * @package Zactonz_Lite
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -6,6 +11,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_action( 'wp_enqueue_scripts', 'zactonz_lite_enqueue_styles' );
 
+/**
+ * Registers and enqueues the theme's single stylesheet.
+ *
+ * The path is handed to WordPress as well as the URL so core can inline the file rather
+ * than make a request for it, which is why the theme ships no stylesheet request of its
+ * own.
+ *
+ * @return void
+ */
 function zactonz_lite_enqueue_styles() {
 	$relative = 'assets/css/main.css';
 	$absolute = ZACTONZ_LITE_DIR . '/' . $relative;
@@ -21,8 +35,17 @@ function zactonz_lite_enqueue_styles() {
 
 add_filter( 'wp_preload_resources', 'zactonz_lite_preload_fonts' );
 
+/**
+ * Preloads the web fonts the active style variation actually uses.
+ *
+ * A variation set in the reader's system font uses none, in which case nothing is
+ * preloaded and nothing is downloaded.
+ *
+ * @param array $resources Resources WordPress will preload.
+ * @return array Resources.
+ */
 function zactonz_lite_preload_fonts( $resources ) {
-	if ( ! apply_filters( 'zactonz_lite_preload_fonts', true ) ) {
+	if ( ! apply_filters( 'zactonz_lite_enable_font_preload', true ) ) {
 		return $resources;
 	}
 
@@ -39,6 +62,14 @@ function zactonz_lite_preload_fonts( $resources ) {
 	return $resources;
 }
 
+/**
+ * Returns the font family slugs referenced anywhere in the resolved global styles.
+ *
+ * Read out of the serialised styles rather than walked, because a family can be named
+ * by preset reference or by custom property and both spellings have to count.
+ *
+ * @return array Font family slugs.
+ */
 function zactonz_lite_used_font_slugs() {
 	$styles = wp_get_global_styles();
 	$encoded = wp_json_encode( $styles );
@@ -53,6 +84,14 @@ function zactonz_lite_used_font_slugs() {
 	return array_values( array_unique( array_merge( $presets[1], $vars[1] ) ) );
 }
 
+/**
+ * Returns the URLs of the font files belonging to families the styles actually use.
+ *
+ * Only files that live inside this theme are returned; a family pointing somewhere else
+ * is left for whoever registered it to preload.
+ *
+ * @return array Absolute font file URLs.
+ */
 function zactonz_lite_active_font_urls() {
 	$families = wp_get_global_settings( array( 'typography', 'fontFamilies' ) );
 
@@ -112,24 +151,4 @@ function zactonz_lite_active_font_urls() {
 	}
 
 	return array_values( array_unique( $urls ) );
-}
-
-
-add_action( 'wp_enqueue_scripts', 'zactonz_lite_slim_navigation_style', 20 );
-
-function zactonz_lite_slim_navigation_style() {
-	if ( ! apply_filters( 'zactonz_lite_slim_navigation_style', true ) ) {
-		return;
-	}
-
-	$relative = 'assets/css/navigation.css';
-	$absolute = ZACTONZ_LITE_DIR . '/' . $relative;
-
-	if ( ! file_exists( $absolute ) || ! wp_style_is( 'wp-block-navigation', 'registered' ) ) {
-		return;
-	}
-
-	wp_deregister_style( 'wp-block-navigation' );
-	wp_register_style( 'wp-block-navigation', ZACTONZ_LITE_URI . '/' . $relative, array(), ZACTONZ_LITE_VERSION );
-	wp_style_add_data( 'wp-block-navigation', 'path', $absolute );
 }

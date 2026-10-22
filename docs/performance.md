@@ -32,22 +32,8 @@ Two practical notes for anyone swapping the font:
 - Request without the `opsz` axis. Newsreader is 129 KB with it and 58 KB without; Instrument Serif
   is 15 KB.
 
-Turn preloading off with `zactonz_lite_preload_fonts`. See [Extension points](extending.md).
+Turn preloading off with `zactonz_lite_enable_font_preload`. See [Extension points](extending.md).
 
-## Speculative loading
-
-Core 6.8+ ships the Speculation Rules API, defaulting to `prefetch` / `conservative`. The theme
-raises it to `prerender` / `moderate`, which makes in-site navigation feel near-instant.
-
-It backs off to core's default when WooCommerce or Easy Digital Downloads is active, because
-prerendering issues **real** requests and that is unsafe for carts. Commerce paths are excluded
-regardless of what is installed.
-
-This improves perceived navigation speed. It does not change first-load LCP, and no benchmark on
-this page reflects it.
-
-Both the configuration and the exclusion list are filterable — including the detail that your
-configuration filter is **not** called on a commerce site. See [Extension points](extending.md).
 
 ## Reproducing the numbers
 
@@ -100,6 +86,13 @@ SEO 92 is the ceiling for a directory theme, not a defect — see
 
 ## Cache eligibility
 
-Nothing in the theme writes cookies, varies output per visitor, or defeats a full-page cache. The
-speculation rules are static markup in the head. A site behind Cloudflare, Varnish or a caching
-plugin can serve these pages from cache without exceptions for the theme.
+Nothing in the theme writes cookies, varies output per visitor, or defeats a full-page cache. A site
+behind Cloudflare, Varnish or a caching plugin can serve these pages from cache without exceptions
+for the theme.
+
+## Speculative loading is not the theme's business
+
+`inc/performance.php` configured `wp_speculation_rules_configuration` until 1.0.1. It was removed:
+choosing a prerender mode is a site-wide decision with no presentational component, it is owned by
+the Speculative Loading plugin, and because a theme loads after plugins the theme's callback
+silently overrode whatever the site owner had saved there.

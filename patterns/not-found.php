@@ -15,6 +15,6 @@
 	<!-- wp:paragraph -->
 	<p><?php echo esc_html__( 'The address you followed does not match anything here. Try a search instead.', 'zactonz-lite' ); ?></p>
 	<!-- /wp:paragraph -->
-	<!-- wp:search {"label":"<?php echo esc_attr__( 'Search', 'zactonz-lite' ); ?>","showLabel":false,"buttonText":"<?php echo esc_attr__( 'Search', 'zactonz-lite' ); ?>"} /-->
+	<!-- wp:search {"label":"<?php echo __( 'Search', 'zactonz-lite' ); ?>","showLabel":false,"buttonText":"<?php echo __( 'Search', 'zactonz-lite' ); ?>"} /-->
 </div>
 <!-- /wp:group -->

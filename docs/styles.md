@@ -111,7 +111,6 @@ Delete it afterwards. This is how the captures on this page were taken.
 |---|---|
 | `assets/css/main.css` | Minified; what ships |
 | `assets/css/main.un-compressed.css` | The readable source you edit |
-| `assets/css/navigation.css` | The 1,628-byte replacement for core's navigation stylesheet |
 | `assets/css/navigation.un-compressed.css` | Its source |
 
 Edit the `.un-compressed.css` file, then:
