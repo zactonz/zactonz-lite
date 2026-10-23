@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Zactonz Lite 1.0.2\n"
+"Project-Id-Version: Zactonz Lite 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/zactonz-lite\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-22T11:24:00+00:00\n"
+"POT-Creation-Date: 2026-10-23T05:08:22+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: zactonz-lite\n"
@@ -39,168 +39,21 @@ msgstr ""
 msgid "https://zactonz.com/"
 msgstr ""
 
-#: dist/zactonz-lite/inc/setup.php:37
 #: inc/setup.php:42
 msgctxt "block pattern category"
 msgid "Zactonz Lite"
 msgstr ""
 
-#: dist/zactonz-lite/inc/setup.php:38
 #: inc/setup.php:43
 msgid "Patterns supplied by the Zactonz Lite theme."
 msgstr ""
 
-#: dist/zactonz-lite/inc/setup.php:58
 #: inc/setup.php:63
 msgid "Boxed"
 msgstr ""
 
-#: dist/zactonz-lite/inc/setup.php:67
 #: inc/setup.php:72
 msgid "Framed"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/cta.php:14
-#: patterns/cta.php:14
-msgid "Keep up with what gets published"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/cta.php:17
-#: patterns/cta.php:17
-msgid "One short line explaining what someone gets if they follow along, and how often."
-msgstr ""
-
-#: dist/zactonz-lite/patterns/cta.php:22
-#: patterns/cta.php:22
-msgid "Subscribe"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/features-three-column.php:12
-#: patterns/features-three-column.php:12
-msgid "Nothing render-blocking"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/features-three-column.php:13
-#: patterns/features-three-column.php:13
-msgid "Styles are inlined by WordPress, so the browser never waits on a stylesheet request before it can paint."
-msgstr ""
-
-#: dist/zactonz-lite/patterns/features-three-column.php:16
-#: patterns/features-three-column.php:16
-msgid "Your reader’s own font"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/features-three-column.php:17
-#: patterns/features-three-column.php:17
-msgid "The default style uses the system font stack, which costs nothing to download and never flashes while it loads."
-msgstr ""
-
-#: dist/zactonz-lite/patterns/features-three-column.php:20
-#: patterns/features-three-column.php:20
-msgid "Out of the way"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/features-three-column.php:21
-#: patterns/features-three-column.php:21
-msgid "Structured data, meta tags and caching stay with the plugins that specialise in them, so nothing is emitted twice."
-msgstr ""
-
-#. translators: 1: current year, 2: site name.
-#: dist/zactonz-lite/patterns/footer.php:18
-#: patterns/footer.php:18
-#, php-format
-msgid "© %1$s %2$s"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/hero.php:14
-#: patterns/hero.php:14
-msgid "Words first, weight last"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/hero.php:17
-#: patterns/hero.php:17
-msgid "A short line of introduction that sets out what this site is for and why anyone should keep reading past the first screen."
-msgstr ""
-
-#: dist/zactonz-lite/patterns/hero.php:22
-#: patterns/hero.php:22
-msgid "Start reading"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/hero.php:25
-#: patterns/hero.php:25
-msgid "About"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/media-text.php:16
-#: patterns/media-text.php:16
-msgid "A circle, a triangle and a rectangle standing in for your picture"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/media-text.php:19
-#: patterns/media-text.php:19
-msgid "A heading beside a picture"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/media-text.php:22
-#: patterns/media-text.php:22
-msgid "Replace the image and this text. The image keeps its aspect ratio reserved while it loads, so nothing on the page jumps once it arrives."
-msgstr ""
-
-#: dist/zactonz-lite/patterns/not-found.php:13
-#: patterns/not-found.php:13
-msgid "That page has moved on"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/not-found.php:16
-#: patterns/not-found.php:16
-msgid "The address you followed does not match anything here. Try a search instead."
-msgstr ""
-
-#: dist/zactonz-lite/patterns/not-found.php:18
-#: patterns/not-found.php:18
-msgid "Search"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/post-footer.php:14
-#: patterns/post-footer.php:14
-msgid "Previous"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/post-footer.php:15
-#: patterns/post-footer.php:15
-msgid "Next"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/post-footer.php:40
-#: patterns/post-footer.php:40
-msgid "Older comments"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/post-footer.php:41
-#: patterns/post-footer.php:41
-msgid "Newer comments"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/posts-list.php:16
-#: patterns/posts-list.php:16
-msgctxt "excerpt read-more link"
-msgid "Continue reading"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/posts-list.php:20
-#: patterns/posts-list.php:20
-msgid "Newer"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/posts-list.php:22
-#: patterns/posts-list.php:22
-msgid "Older"
-msgstr ""
-
-#: dist/zactonz-lite/patterns/posts-list.php:27
-#: patterns/posts-list.php:27
-msgid "Nothing found here yet."
 msgstr ""
 
 #: patterns/cta.php
@@ -213,6 +66,18 @@ msgctxt "Pattern description"
 msgid "A boxed call to action with a heading, a line of text and a button."
 msgstr ""
 
+#: patterns/cta.php:14
+msgid "Keep up with what gets published"
+msgstr ""
+
+#: patterns/cta.php:17
+msgid "One short line explaining what someone gets if they follow along, and how often."
+msgstr ""
+
+#: patterns/cta.php:22
+msgid "Subscribe"
+msgstr ""
+
 #: patterns/features-three-column.php
 msgctxt "Pattern title"
 msgid "Three columns of features"
@@ -223,9 +88,39 @@ msgctxt "Pattern description"
 msgid "Three short feature columns, each with a heading and a paragraph."
 msgstr ""
 
+#: patterns/features-three-column.php:12
+msgid "Nothing render-blocking"
+msgstr ""
+
+#: patterns/features-three-column.php:13
+msgid "Styles are inlined by WordPress, so the browser never waits on a stylesheet request before it can paint."
+msgstr ""
+
+#: patterns/features-three-column.php:16
+msgid "Your reader’s own font"
+msgstr ""
+
+#: patterns/features-three-column.php:17
+msgid "The default style uses the system font stack, which costs nothing to download and never flashes while it loads."
+msgstr ""
+
+#: patterns/features-three-column.php:20
+msgid "Out of the way"
+msgstr ""
+
+#: patterns/features-three-column.php:21
+msgid "Structured data, meta tags and caching stay with the plugins that specialise in them, so nothing is emitted twice."
+msgstr ""
+
 #: patterns/footer.php
 msgctxt "Pattern title"
 msgid "Footer"
+msgstr ""
+
+#. translators: 1: current year, 2: site name.
+#: patterns/footer.php:18
+#, php-format
+msgid "© %1$s %2$s"
 msgstr ""
 
 #: patterns/header.php
@@ -243,6 +138,22 @@ msgctxt "Pattern description"
 msgid "A large headline with a short paragraph and two buttons."
 msgstr ""
 
+#: patterns/hero.php:14
+msgid "Words first, weight last"
+msgstr ""
+
+#: patterns/hero.php:17
+msgid "A short line of introduction that sets out what this site is for and why anyone should keep reading past the first screen."
+msgstr ""
+
+#: patterns/hero.php:22
+msgid "Start reading"
+msgstr ""
+
+#: patterns/hero.php:25
+msgid "About"
+msgstr ""
+
 #: patterns/media-text.php
 msgctxt "Pattern title"
 msgid "Image beside text"
@@ -253,9 +164,33 @@ msgctxt "Pattern description"
 msgid "An image on one side with a heading and paragraph on the other."
 msgstr ""
 
+#: patterns/media-text.php:16
+msgid "A circle, a triangle and a rectangle standing in for your picture"
+msgstr ""
+
+#: patterns/media-text.php:19
+msgid "A heading beside a picture"
+msgstr ""
+
+#: patterns/media-text.php:22
+msgid "Replace the image and this text. The image keeps its aspect ratio reserved while it loads, so nothing on the page jumps once it arrives."
+msgstr ""
+
 #: patterns/not-found.php
 msgctxt "Pattern title"
 msgid "Page not found"
+msgstr ""
+
+#: patterns/not-found.php:13
+msgid "That page has moved on"
+msgstr ""
+
+#: patterns/not-found.php:16
+msgid "The address you followed does not match anything here. Try a search instead."
+msgstr ""
+
+#: patterns/not-found.php:18
+msgid "Search"
 msgstr ""
 
 #: patterns/post-footer.php
@@ -263,12 +198,44 @@ msgctxt "Pattern title"
 msgid "Post footer"
 msgstr ""
 
+#: patterns/post-footer.php:14
+msgid "Previous"
+msgstr ""
+
+#: patterns/post-footer.php:15
+msgid "Next"
+msgstr ""
+
+#: patterns/post-footer.php:40
+msgid "Older comments"
+msgstr ""
+
+#: patterns/post-footer.php:41
+msgid "Newer comments"
+msgstr ""
+
 #: patterns/posts-list.php
 msgctxt "Pattern title"
 msgid "Posts list"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
+#: patterns/posts-list.php:16
+msgctxt "excerpt read-more link"
+msgid "Continue reading"
+msgstr ""
+
+#: patterns/posts-list.php:20
+msgid "Newer"
+msgstr ""
+
+#: patterns/posts-list.php:22
+msgid "Older"
+msgstr ""
+
+#: patterns/posts-list.php:27
+msgid "Nothing found here yet."
+msgstr ""
+
 #: theme.json
 #: styles/dark.json
 #: styles/ink.json
@@ -276,7 +243,6 @@ msgctxt "Color name"
 msgid "Base"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 #: styles/dark.json
 #: styles/ink.json
@@ -284,7 +250,6 @@ msgctxt "Color name"
 msgid "Surface"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 #: styles/dark.json
 #: styles/ink.json
@@ -292,7 +257,6 @@ msgctxt "Color name"
 msgid "Contrast"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 #: styles/dark.json
 #: styles/ink.json
@@ -300,7 +264,6 @@ msgctxt "Color name"
 msgid "Contrast muted"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 #: styles/dark.json
 #: styles/ink.json
@@ -308,7 +271,6 @@ msgctxt "Color name"
 msgid "Accent"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 #: styles/dark.json
 #: styles/ink.json
@@ -316,127 +278,106 @@ msgctxt "Color name"
 msgid "Accent soft"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Shadow name"
 msgid "Subtle"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Shadow name"
 msgid "Raised"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Space size name"
 msgid "1"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Space size name"
 msgid "2"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Space size name"
 msgid "3"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Space size name"
 msgid "4"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Space size name"
 msgid "5"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Space size name"
 msgid "6"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Space size name"
 msgid "7"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Font family name"
 msgid "Sans"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Font family name"
 msgid "Serif"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Font family name"
 msgid "Mono"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Font size name"
 msgid "Extra small"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Font size name"
 msgid "Small"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Font size name"
 msgid "Medium"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Font size name"
 msgid "Large"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Font size name"
 msgid "Extra large"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Font size name"
 msgid "Extra extra large"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Template part name"
 msgid "Header"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Template part name"
 msgid "Footer"
 msgstr ""
 
-#: dist/zactonz-lite/theme.json
 #: theme.json
 msgctxt "Custom template name"
 msgid "Page, wide"
