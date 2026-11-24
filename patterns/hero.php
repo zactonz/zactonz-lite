@@ -11,7 +11,7 @@
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30","padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
 	<!-- wp:heading {"level":2,"fontSize":"xx-large"} -->
-	<h2 class="wp-block-heading has-xx-large-font-size"><?php echo esc_html__( 'Words first, weight last', 'zactonz-lite' ); ?></h2>
+	<h2 class="wp-block-heading has-xx-large-font-size"><?php echo esc_html__( 'Essays, notes and lists', 'zactonz-lite' ); ?></h2>
 	<!-- /wp:heading -->
 	<!-- wp:paragraph {"fontSize":"medium"} -->
 	<p class="has-medium-font-size"><?php echo esc_html__( 'A short line of introduction that sets out what this site is for and why anyone should keep reading past the first screen.', 'zactonz-lite' ); ?></p>

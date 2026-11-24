@@ -109,11 +109,10 @@ Delete it afterwards. This is how the captures on this page were taken.
 
 | File | Purpose |
 |---|---|
-| `assets/css/main.css` | Minified; what ships |
-| `assets/css/main.un-compressed.css` | The readable source you edit |
-| `assets/css/navigation.un-compressed.css` | Its source |
+| `assets/css/main.css` | The readable source you edit |
+| `assets/css/main.min.css` | Minified; what ships and what loads |
 
-Edit the `.un-compressed.css` file, then:
+Edit `main.css`, then:
 
 ```bash
 php tools/build-css.php
@@ -122,5 +121,5 @@ php tools/build-css.php
 Both files must ship together — the directory requires a readable source beside any minified asset,
 and `tools/lint.php` fails if they drift apart.
 
-`main.css` is also registered as the editor stylesheet via `add_editor_style()`, so the editor and
+`main.min.css` is also registered as the editor stylesheet via `add_editor_style()`, so the editor and
 the front end stay in step without a second file.

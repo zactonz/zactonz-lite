@@ -9,16 +9,16 @@
 
 $zactonz_lite_features = array(
 	array(
-		'title' => __( 'Nothing render-blocking', 'zactonz-lite' ),
-		'body'  => __( 'Styles are inlined by WordPress, so the browser never waits on a stylesheet request before it can paint.', 'zactonz-lite' ),
+		'title' => __( 'Your first point', 'zactonz-lite' ),
+		'body'  => __( 'A sentence or two about whatever a visitor should notice first. Replace this text with your own.', 'zactonz-lite' ),
 	),
 	array(
-		'title' => __( 'Your reader’s own font', 'zactonz-lite' ),
-		'body'  => __( 'The default style uses the system font stack, which costs nothing to download and never flashes while it loads.', 'zactonz-lite' ),
+		'title' => __( 'Your second point', 'zactonz-lite' ),
+		'body'  => __( 'Keep the three columns to a similar length so they line up neatly. Replace this text with your own.', 'zactonz-lite' ),
 	),
 	array(
-		'title' => __( 'Out of the way', 'zactonz-lite' ),
-		'body'  => __( 'Structured data, meta tags and caching stay with the plugins that specialise in them, so nothing is emitted twice.', 'zactonz-lite' ),
+		'title' => __( 'Your third point', 'zactonz-lite' ),
+		'body'  => __( 'Put a link in the paragraph if a column should lead somewhere. Replace this text with your own.', 'zactonz-lite' ),
 	),
 );
 

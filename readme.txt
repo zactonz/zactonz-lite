@@ -4,7 +4,7 @@ Contributors: zactonz
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, wide-blocks, block-patterns, block-styles, custom-colors, custom-logo, editor-style, featured-images, full-site-editing, style-variations, template-editing
@@ -66,10 +66,20 @@ Created for this theme by Zactonz Technologies, licensed GPL-2.0-or-later, same 
 
 == Upgrade Notice ==
 
+= 1.0.2 =
+Answers the 1.0.1 review: a screenshot that no longer advertises the theme, and the minified stylesheet renamed so its readable source is obvious.
+
 = 1.0.1 =
 First public release. Addresses every item raised in the review of 1.0.0.
 
 == Changelog ==
+
+= 1.0.2 =
+* New screenshot. The old one showed three columns describing the theme's own features, which reads as an advertisement rather than as the theme.
+* The Three columns of features pattern no longer ships copy about this theme. Inserting it now gives placeholder text a site can replace, like the other patterns.
+* Hero pattern headline is a site's own headline rather than the theme's tagline.
+* Rename the stylesheets to the convention: assets/css/main.css is the readable source and assets/css/main.min.css is what loads. Both ship, as before; only the names changed.
+* Correct the developer documentation, which still described a navigation stylesheet and filter removed in 1.0.1.
 
 = 1.0.1 =
 * Keep the core navigation block stylesheet instead of replacing it, so a navigation block with the overlay menu enabled works as core intends.

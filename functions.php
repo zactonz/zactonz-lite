@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'ZACTONZ_LITE_VERSION' ) ) {
-	define( 'ZACTONZ_LITE_VERSION', '1.0.1' );
+	define( 'ZACTONZ_LITE_VERSION', '1.0.2' );
 }
 
 if ( ! defined( 'ZACTONZ_LITE_DIR' ) ) {

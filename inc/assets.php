@@ -21,7 +21,7 @@ add_action( 'wp_enqueue_scripts', 'zactonz_lite_enqueue_styles' );
  * @return void
  */
 function zactonz_lite_enqueue_styles() {
-	$relative = 'assets/css/main.css';
+	$relative = 'assets/css/main.min.css';
 	$absolute = ZACTONZ_LITE_DIR . '/' . $relative;
 
 	if ( ! file_exists( $absolute ) ) {

@@ -37,37 +37,15 @@ own**, and the menu is plain anchor markup a crawler reads without executing any
 At narrow widths the items wrap onto a second line instead of collapsing behind a button. Verified at
 375px: all four items visible, no horizontal page scroll.
 
-The trade-off is real. A long menu wraps to several lines on a phone. If you need an overlay, change
-it and restore core's stylesheet — the next section explains why both steps are needed.
-
-
-### If you change the header
-
-Restore core's stylesheet whenever your navigation uses an overlay or submenus, or they will render
-unstyled:
-
-```php
-add_filter( 'zactonz_lite_slim_navigation_style', '__return_false' );
-```
-
-From a must-use plugin, because the filter is read while the theme loads.
-
-### If you extend the slim stylesheet instead
-
-Edit `assets/css/navigation.un-compressed.css`, then rebuild:
-
-```bash
-php tools/build-css.php
-```
-
-The minified file and its readable source must both ship — the directory requires it, and
-`tools/lint.php` fails if they drift.
+The trade-off is real. A long menu wraps to several lines on a phone. If you need an overlay, set
+`overlayMenu` back to `"mobile"` on the navigation block. Core's own stylesheet and scripts are
+present, so the overlay works with no further change — see **The core stylesheet stays** below.
 
 ## Submenus
 
-The slim stylesheet does not carry core's submenu rules. If you add a submenu, take the
-`zactonz_lite_slim_navigation_style` route above rather than copying fragments of core's CSS, which
-changes between releases.
+Submenus render with core's own rules. Anything the theme wants on top of them belongs in
+`assets/css/main.css` with a more specific selector, rather than a copy of core's CSS, which changes
+between releases.
 
 ## Accessibility
 

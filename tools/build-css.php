@@ -1,14 +1,19 @@
 <?php
 
-$sources = glob( __DIR__ . '/../assets/css/*.un-compressed.css' );
+$sources = array_values(
+	array_filter(
+		glob( __DIR__ . '/../assets/css/*.css' ),
+		static fn( $path ) => ! str_ends_with( $path, '.min.css' )
+	)
+);
 
 if ( ! $sources ) {
-	fwrite( STDERR, "no *.un-compressed.css sources found\n" );
+	fwrite( STDERR, "no stylesheet sources found\n" );
 	exit( 1 );
 }
 
 foreach ( $sources as $src ) {
-	$out = preg_replace( '~\.un-compressed\.css$~', '.css', $src );
+	$out = preg_replace( '~\.css$~', '.min.css', $src );
 	$css = file_get_contents( $src );
 	$css = preg_replace( '~/\*.*?\*/~s', '', $css );
 	$css = preg_replace( '~\s+~', ' ', $css );

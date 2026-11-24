@@ -16,9 +16,9 @@ done < <(find . -name '*.php' -not -path './dist/*' -not -path './.git/*')
 
 echo
 echo "== css build is current =="
-before=$(find assets/css -name '*.css' -not -name '*.un-compressed.css' -exec md5 -q {} \; 2>/dev/null | sort | md5 -q)
+before=$(find assets/css -name '*.min.css' -exec md5 -q {} \; 2>/dev/null | sort | md5 -q)
 php tools/build-css.php >/dev/null
-after=$(find assets/css -name '*.css' -not -name '*.un-compressed.css' -exec md5 -q {} \; 2>/dev/null | sort | md5 -q)
+after=$(find assets/css -name '*.min.css' -exec md5 -q {} \; 2>/dev/null | sort | md5 -q)
 if [ "$before" != "$after" ]; then
 	echo "FAIL  minified CSS was stale; tools/build-css.php has regenerated it"
 	status=1

@@ -159,7 +159,7 @@ Everything else is explained here instead.
 ## Working on it
 
 ```bash
-php tools/build-css.php     # *.un-compressed.css -> *.css
+php tools/build-css.php     # *.css -> *.min.css
 bash tools/lint.sh          # the single gate
 php tools/measure.php URL   # one page's weight
 php tools/benchmark.php     # four-theme comparison, switches themes and restores

@@ -23,7 +23,7 @@ function zl_files( $root, $pattern ) {
 $php_files      = zl_files( $root, '~\.php$~' );
 $shipped_php    = array_values( array_filter( $php_files, fn( $f ) => ! str_contains( $f, '/tools/' ) ) );
 $block_files    = array_merge( zl_files( $root, '~/(templates|parts)/.*\.html$~' ), zl_files( $root, '~/patterns/.*\.php$~' ) );
-$css_min        = zl_files( $root, '~/assets/css/[^/]*(?<!un-compressed)\.css$~' );
+$css_min        = zl_files( $root, '~/assets/css/[^/]*\.min\.css$~' );
 $style_css      = file_get_contents( $root . '/style.css' );
 
 $rel = fn( $f ) => str_replace( $root . '/', '', $f );
@@ -138,9 +138,9 @@ foreach ( array_merge( $shipped_php, $block_files, zl_files( $root, '~/assets/cs
 
 // 10. Minified CSS must ship with its readable source.
 foreach ( $css_min as $file ) {
-	$source = preg_replace( '~\.css$~', '.un-compressed.css', $file );
+	$source = preg_replace( '~\.min\.css$~', '.css', $file );
 	if ( ! file_exists( $source ) ) {
-		$fail[] = $rel( $file ) . ': minified CSS without an un-compressed source beside it';
+		$fail[] = $rel( $file ) . ': minified CSS without its readable source beside it';
 	} elseif ( filesize( $file ) > filesize( $source ) ) {
 		$warn[] = $rel( $file ) . ': minified file is larger than its source';
 	}

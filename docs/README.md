@@ -41,5 +41,4 @@ theme that ships them. Where a guide here says "the theme does not do X", that i
 - Prefix for everything the theme owns: `zactonz_lite_` in PHP, `zactonz-lite` in slugs and CSS.
 - Shipped PHP carries no comments and no docblocks. Reasoning lives in these documents and in the
   changelog, not in the source.
-- Minified stylesheets ship beside their readable `.un-compressed.css` source, which the directory
-  requires.
+- Minified stylesheets ship beside their readable `.css` source, which the directory requires.

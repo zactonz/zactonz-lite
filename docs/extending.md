@@ -32,7 +32,7 @@ foreach ( array( 'setup', 'assets', 'performance' ) as $module ) {
 | Filter | Default | Skipping it means |
 |---|---|---|
 | `zactonz_lite_load_setup` | `true` | No text domain, no editor style, no pattern category, no block styles, no comment-heading fix |
-| `zactonz_lite_load_assets` | `true` | No `main.css`, no font preloading, no navigation stylesheet substitution |
+| `zactonz_lite_load_assets` | `true` | No stylesheet and no font preloading |
 
 These run at theme load, so they must be set from a must-use plugin:
 
@@ -44,26 +44,6 @@ add_filter( 'zactonz_lite_load_assets', '__return_false' );
 A plugin loaded normally is too late — `functions.php` has already run.
 
 ## Assets
-
-### `zactonz_lite_slim_navigation_style`
-
-```php
-apply_filters( 'zactonz_lite_slim_navigation_style', true );
-```
-
-Core's `wp-block-navigation` stylesheet is 20,776 bytes, most of it responsive-overlay and submenu
-variants this theme's header never renders. When this returns `true`, the theme skips preloading that
-handle and re-registers it against its own 1,628-byte file, saving 19,148 bytes on every page.
-
-Return `false` to keep core's stylesheet — do that if you replace the header with one that uses an
-overlay menu or submenus. See [Navigation and menus](navigation.md).
-
-```php
-add_filter( 'zactonz_lite_slim_navigation_style', '__return_false' );
-```
-
-The substitution runs on `wp_enqueue_scripts` at priority 20 and bails if the handle is not
-registered, so the order relative to other plugins is safe.
 
 ### `zactonz_lite_enable_font_preload`
 

@@ -18,7 +18,7 @@ add_action( 'after_setup_theme', 'zactonz_lite_setup' );
  */
 function zactonz_lite_setup() {
 	load_theme_textdomain( 'zactonz-lite', ZACTONZ_LITE_DIR . '/languages' );
-	add_editor_style( 'assets/css/main.css' );
+	add_editor_style( 'assets/css/main.min.css' );
 }
 
 add_action( 'init', 'zactonz_lite_register_pattern_category' );
